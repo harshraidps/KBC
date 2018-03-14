@@ -1,0 +1,1535 @@
+﻿<html>
+<head>
+<title>KBC::HARSH RAI</title>
+<script src="game.js"></script>
+<script src="jq.js"></script>
+<script src="sweetalert2.js"></script>
+<link rel="stylesheet" href="sw.css"/>	
+<script>
+document.onkeydown = function(e) {
+    if(e.keyCode == 123) {
+     return false;
+    }
+	if(e.keyCode == 27) {
+     return false;
+    }
+	if(e.ctrlKey && e.keyCode =='C'.charCodeAt(0)){
+     return false;
+    }
+	if(e.ctrlKey && e.keyCode =='A'.charCodeAt(0)){
+     return false;
+    }
+	if(e.ctrlKey && e.keyCode =='S'.charCodeAt(0)){
+     return false;
+    }
+	if(e.ctrlKey && e.keyCode =='X'.charCodeAt(0)){
+     return false;
+    }
+	if(e.ctrlKey && e.keyCode =='V'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+     return false;
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+     return false;
+    }      
+ }
+ document.oncontextmenu=function(){return false;}
+ 
+ // mozfullscreenerror event handler
+function errorHandler() {
+   alert('mozfullscreenerror');
+}
+document.documentElement.addEventListener('mozfullscreenerror', errorHandler, false);
+
+// toggle full screen
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } 
+}
+
+// keydown event handler
+document.addEventListener('keydown', function(e) {
+  if (e.keyCode == 13 || e.keyCode == 70) { // F or Enter key
+    toggleFullScreen();
+  }
+}, );
+ </script>
+<link rel="stylesheet" href="loader.css"/>
+<script src="a.js"></script>
+</head>
+<body onload="rup1(),myFunction(),toggleFullScreen()"  background="bg.gif">
+<style>
+:-webkit-full-screen #web {
+  font-size: 20px;
+  width: 100%;
+}
+:-moz-full-screen #web {
+  font-size: 20px;
+  width: 100%;
+}
+.question{
+	font-family:Segoe UI;
+	font-size: 2.1vw;
+	color:yellow;;
+}
+.options{
+	font-family:Segoe UI;
+	font-size: 1.8vw;
+	color:yellow;
+	font-style: italic;
+	width:50%;
+	text-align:center;
+}
+.q{
+border-style: ridge;
+border-color:silver;
+border-width:10px;
+border-radius:100px;
+}
+.rup{
+border-style: ridge;
+border-color:silver;
+}
+body{
+background: linear-gradient(to right bottom ,violet,purple,purple);
+}
+.options{
+text-align:center;
+}
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+.loader{
+background-image: url("pre.png");
+}
+.moneywiz{
+	border-radius:10px;
+	background: linear-gradient(to  bottom ,orange,white,green);
+	opacity: 0.85;
+	width: 40%;
+	height:60%;
+	font-size:25px;
+	font-family: Segoe UI;
+	text-align: center;
+
+}
+.moneyvalue{
+	background-color: grey;
+	opacity: 0.9;
+	border: groove;
+	width:40%;
+	color: white;
+	border-radius: 15px;
+}
+.headmoney{
+	font-size: 30px;
+	opacity: 0.9;
+	color: blue;
+}
+#lastPart{
+width:100%;
+height:100%;
+    background-image:url("12.jpg");
+	background-attachment:fixed;
+background-repeat:no-repeat;
+background-clip: padding-box;
+background-size: 100%;
+}
+    .lastpartb{
+        font-size: 35;
+        font-family: Segoe UI;
+        color:ghostwhite;
+		background-color:Black;
+		opacity:0.725;
+		border-radius:30%;
+		width:60%;
+    }
+	.top{
+	opacity:0.9;position:fixed; width:100%;background-color:white;top:0px;left:0px;height:7.5%;text-align:center
+	}
+	.top:hover{
+	opacity:1;
+	}
+	.butl{
+	border:none;
+	background-color:black;
+	color:white;
+	width:100%;
+    height:100%;	
+	font-size:15px;
+	font-family:Segoe UI;
+	}
+	.butl:hover{
+	 border-radius:10%;
+	 width:90%;
+	}
+	.bu{
+	width:50%;
+	}
+</style>
+<div id="web">
+<div id="preloader" >
+  <div id="loader"></div>
+</div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<div>
+<table class="top" >
+<tr>
+<td width="40%" style="font-size:20px;font-family:Segoe UI">
+KAUN BANEGA CROREPATIPATI
+</td>
+<td width="15%">
+<button class="butl" id="ap" onclick="ap()">AUDIENCE's POLL</button>
+</td>
+<td width="15%">
+<button class="butl" id="ff" onclick="ff()">50:50</button>
+</td width="15%">
+<td>
+<button class="butl" id="pof" onclick="pof()">PHONE YOUR FRIEND</button>
+</td>
+<td width="15%" bgcolor="purple">
+<center>
+									<button id="q" class="bu" style="height:100%" onclick="quit()">QUIT</button>
+								<button id="qf"  class="bu" style="display:none;" onclick="QuitFinal()">FINAL QUIT</button>
+								</center>
+</td>
+</tr>
+</table>
+</div>
+<br/><br/><br/>
+	<table width="100%" >
+		<tr>
+			<td width="60%">
+				<center><img src="kbcl.png" width="500px" height="500px"/></center>
+			</td>
+			<td>
+				<table class="rup" align="Center" border="10"  width="60%" style="color: yellow;font-family: Segoe UI;font-weight: 20px">
+                      <tr>
+						<td id="ra16">16</td>
+						<td id="rb16" width="50%">
+							7 crore </td>
+							<td id="rc16"><marquee behavior="alternate"><img id="jio" width="17" height="17" src="jiob.png"/></marquee></td>
+						
+					</tr>
+					<tr >
+						<td id="ra15">15</td>
+						<td id="rb15" colspan="3">
+							1 crore
+						</td>
+					</tr>
+					<tr><td id="ra14">14</td>
+						<td id="rb14" colspan="3">
+							50,00,000
+						</td>
+						</tr>
+					<tr><td id="ra13">13</td>
+						<td id="rb13" colspan="3">
+						25,00,000 
+						</td>
+						</tr>
+					<tr><td id="ra12">12</td>
+						<td id="rb12" colspan="3">
+							12,50,000
+						</td>
+						</tr>
+					<tr><td id="ra11">11</td>
+						<td id="rb11" colspan="3">
+							6,40,000
+						</td>
+						</tr>
+					<tr bgcolor="grey" style="color:white"><td id="ra10">10</td>
+						<td id="rb10" colspan="3">
+							3,20,000
+						</td>
+						
+						</tr>
+					<tr><td id="ra9">9</td>
+						<td id="rb9" colspan="3">
+							1,60,000
+						</td>
+						</tr>
+					<tr><td id="ra8">8</td>
+						<td id="rb8"  colspan="3">
+							80,000
+						</td>
+						</tr>
+					<tr><td id="ra7">7</td>
+						<td id="rb7"  colspan="3">
+							40,000
+						</td>
+						</tr>
+					<tr><td id="ra6">6</td>
+
+						<td id="rb6"  colspan="3">
+							20,000
+						</td>
+						</tr>
+					<tr bgcolor="grey" style="color:white"><td id="ra5">5</td>
+						<td id="rb5"  colspan="3">
+							10,000
+						</td>
+						</tr>
+					<tr><td id="ra4">4</td>
+						<td id="rb4"  colspan="3">
+						 5,000
+						</td>
+						</tr>
+					<tr><td id="ra3">3</td>
+						<td id="rb3"  colspan="3">
+						 3,000
+						</td>
+						</tr>
+					<tr><td id="ra2">2</td>
+						<td id="rb2"  colspan="3">
+							2,000
+						</td>
+						</tr>
+					<tr><td id="ra1" >1</td>
+						<td id="rb1"  colspan="3">
+							1,000
+						</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+						<tr >
+							<td colspan="2">
+								<br/><br/>
+								<center>
+									<button id="q2" onclick="quit()">QUIT</button>
+								<button id="qf2" style="display:none;" onclick="QuitFinal()">FINAL QUIT</button>
+								</center>
+								<table width="80%"  class="q"  height="150px" align="center">
+								<tr>
+								<td>
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center>
+<script>
+document.write(xmlDoc.getElementsByTagName("question1")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script>
+                                             </center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose1a()" id="q1a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option1")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win1()" id="q1b"class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option1")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose1c()" id="q1c"class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option1")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose1d()" id="q1d" class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option1")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question2")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose2a()" id="q2a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option2")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose2b()" id="q2b"class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option2")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose2c()" id="q2c"class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option2")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win2()" id="q2d" class="options">
+										<script>
+document.write(xmlDoc.getElementsByTagName("option2")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question3")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="win3()" id="q3a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option3")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose3b()" id="q3b" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option3")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose3c()" id="q3c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option3")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose3d()" id="q3d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option3")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="4">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question4")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose4a()" id="q4a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option4")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td> 
+										<td onclick="loose4b()" id="q4b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option4")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose4c()" id="q4c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option4")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win4()" id="q4d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option4")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question5")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose5a()" id="q5a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option5")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win5()" id="q5b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option5")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose5c()" id="q5c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option5")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose5d()" id="q5d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option5")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question6")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose6a()" id="q6a" class="options">
+											<center><script>
+  document.write(xmlDoc.getElementsByTagName("option6")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+										<td onclick="loose6b()" id="q6b"class="options">
+											<center><script>
+  document.write(xmlDoc.getElementsByTagName("option6")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="win6()" id="q6c"class="options">
+									<center>		<script>
+  document.write(xmlDoc.getElementsByTagName("option6")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+										<td onclick="loose6d()" id="q6d" class="options">
+										<center>	<script>
+  document.write(xmlDoc.getElementsByTagName("option6")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question7")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose7a()" id="q7a" class="options">
+											<Center><script>
+  document.write(xmlDoc.getElementsByTagName("option7")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+										<td onclick="win7()" id="q7b"class="options">
+								<center><script>
+  document.write(xmlDoc.getElementsByTagName("option7")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose7c()" id="q7c"class="options">
+											<center><script>
+  document.write(xmlDoc.getElementsByTagName("option7")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+										<td onclick="loose7d()" id="q7d" class="options">
+											<center><script>
+  document.write(xmlDoc.getElementsByTagName("option7")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script></center>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question8")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="win8()" id="q8a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option8")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose8b()" id="q8b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option8")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose8c()" id="q8c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option8")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose8d()" id="q8d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option8")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question9")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose9a()" id="q9a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option9")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose9b()" id="q9b"class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option9")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="win9()" id="q9c"class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option9")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose9d()" id="q9d" class="options">
+											<script>
+document.write(xmlDoc.getElementsByTagName("option9")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question10")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose10a()" id="q10a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option10")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win10()" id="q10b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option10")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose10c()" id="q10c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option10")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose10d()" id="q10d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option10")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								
+									<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="11">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question11")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose11a()" id="q11a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option11")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose11b()" id="q11b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option11")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose11c()" id="q11c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option11")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win11()" id="q11d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option11")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question12")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose12a()" id="q12a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option12")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose12b()" id="q12b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option12")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="win12()" id="q12c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option12")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose12d()" id="q12d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option12")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question13")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="win13()" id="q13a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option13")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose13b()" id="q13b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option13")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose13c()" id="q13c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option13")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose13d()" id="q13d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option13")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+									<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="14">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question14")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose14a()" id="q14a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option14")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose14b()" id="q14b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option14")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose14c()" id="q14c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option14")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="win14()" id="q14d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option14")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								
+								
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question15")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="loose15a()" id="q15a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option15")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose15b()" id="q15b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option15")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="win15()" id="q15c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option15")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose15d()" id="q15d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option15")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+								
+								<div class="questions ">
+								<table width="80%" align="center" cellspacing="20"  >
+									<Tr>
+										<Td class="question" colspan="2">
+											<center><script>
+document.write(xmlDoc.getElementsByTagName("question16")[0].getElementsByTagName("question")[0].childNodes[0].nodeValue);
+</script></center> 
+										</Td>
+									</Tr>
+									<tr>
+										<td onclick="win16()" id="q16a" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option16")[0].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+										<td onclick="loose16b()" id="q16b"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option16")[1].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+									<tr>
+										<td onclick="loose16c()" id="q16c"class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option16")[2].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+											</td>
+										<td onclick="loose16d()" id="q16d" class="options">
+											<script>
+  document.write(xmlDoc.getElementsByTagName("option16")[3].getElementsByTagName("opt")[0].childNodes[0].nodeValue);
+</script>
+										</td>
+									</tr>
+								</table>
+								</div>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </td>
+        </tr>
+    </table>
+                    
+<br/><br/>
+			<table style="position:fixed;width:100%;bottom:0px;left:0px;background-color:white;font-family:Segoe UI;opacity:0.9;"><tr><td><center>Devloped By: HARSH RAI , VIII/A &nbsp;&nbsp;</center></td></tr></table>	
+	</div>
+				<div id="fulLast">
+				<div id="last0"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹You have lost the Game</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>	 
+			     <div id="last1"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 1,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last2" style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+                            <center><div class="moneyvalue" >₹ 2,000</div></center></td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 
+				 <div id="last3"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 3,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last4"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 5,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last5"  style="display:none;">
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 10,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last6"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 20,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last7"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 40,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last8"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 80,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last9" style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 1,60,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last10"  style="display:none;">
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 3,20,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last11"  style="display:none;">
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 6,40,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last12"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 12,50,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last13"  style="display:none;">
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 25,00,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last14"  style="display:none;">
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2" > 
+						<center><div class="moneyvalue" >₹ 50,00,000</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2" >
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last15"  style="display:none;" >
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 1 crore</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+				 
+				 <div id="last16"  style="display:none;">
+				<br/><br/><br/><br/><br/><br/>
+				<table align="center" class="moneywiz" border="1">
+					<tr>
+						<td class="headmoney"  colspan="2">
+							<center>Money Wizard (Cashless India)</center>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">
+							<center><img src=" " alt="Axis Bank"/></center>
+						</td>
+						<td width="50%">
+							<center><img src="" alt="Digital India"/></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2"> 
+						<center><div class="moneyvalue" >₹ 7 crore</div></center>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2">
+						<center><button class="getm" onclick="smoney()">GET</button></center>
+						</td>
+					</tr>
+				</table>
+				</div>
+    </div>
+  <center><div id="lastPart" style="display:none" >
+  <br/><br/><br/><br/>
+  <div class="lastpartb" width="60%" height="80%"><br/><br/><br/> <center>THANK YOU FOR PLAYING KBC</center>
+  <center> <br/><img src="kbcl.png"/ width="150px" height="150px"><img hspace="100px" src="hr.png"/><img src="kbcl.png"/ width="150px" height="150px"><br/><br/>MADE BY- HARSH RAI</center>
+  <br/>
+  <br/>
+  
+  <center></center>
+  </div>
+  </div>
+  <div id="thanks" style="display:none;width:100%;height:100%;" >
+  <br/><br/><br/><br/>
+  <img id="thankimg" src="6.jpg" style="width:100%;height:80%"/>
+  </div>
+    </center>
+	</div>
+	</body>
+    			<script>
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("questions");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+			</script>
+			<script>
+function myFunction() {
+   setTimeout(showPage, 2000);
+}
+
+function showPage2() {
+  document.getElementById("preloader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  swal('<div>Lets play!<br/><h2><b><font color="purple" face="Copperplate Gothic">KAUN BANGEA CROREPATI</font><b></h2><br/>JIO DIGITAL LIFE<br/><center><marquee behavior="alternate" hspace="100"><img src="jio.png" width="100px" height="100px"/></center></marquee>Sponsered By:<br/><center><marquee behavior="alternate" hspace="100" direction="right"><img src="hr.png" width="100px" height="100px"/><br/></marquee>Industries<center></div>');
+}
+function showPage(){
+ document.getElementById("preloader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+   swal('<div>Lets play!<br/><h2><b><font color="purple" face="Copperplate Gothic">KAUN BANGEA CROREPATI</font><b></h2>');
+}
+function smoney(){
+setTimeout(smoneylast,750);
+setTimeout(maxLast,1250);
+}
+function smoneylast(){
+swal('Successful Transaction');
+}
+function maxLast(){
+	document.getElementById("fulLast").style.display = "none";
+	document.getElementById("thanks").style.display = "block";
+                             setTimeout(changea,2000);
+}
+function changea(){document.getElementById("thankimg").src="4.jpg";
+setTimeout(changeb,2000);
+}
+function changeb(){document.getElementById("thankimg").src="3.jpg";
+setTimeout(changec,2000);
+}
+function changec(){document.getElementById("thankimg").src="2.jpg";
+setTimeout(changed,2000);
+}
+function changed(){document.getElementById("thankimg").src="5.jpg";
+setTimeout(maxLastb,2000);
+}
+function maxLastb(){
+	document.getElementById("thanks").style.display = "none";
+	document.getElementById("preloader").style.display = "none";
+	document.getElementById("lastPart").style.display = "block";
+	
+}
+
+			</script>
