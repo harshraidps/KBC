@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KBC>
+<question1>
+ <question>1.Gulliver’s Travels is a famous work of….</question>
+</question1>
+
+<option1>
+ <opt>A)James Joyce</opt>
+</option1>
+<option1>
+ <opt>B)Jonathan Swift</opt>
+</option1>
+<option1>
+ <opt>C)James Hilton</opt>
+</option1>
+<option1>
+ <opt>D)Ernest Hemingway</opt>
+</option1>
+
+
+<question2>
+ <question>2.Which of the planets is nearest to the earth? </question>
+</question2>
+
+<option2>
+ <opt>A)Jupiter</opt>
+</option2>
+<option2>
+ <opt>B)Mars</opt>
+</option2>
+<option2>
+ <opt>C)Mercury</opt>
+</option2>
+<option2>
+ <opt>D)Venus</opt>
+</option2>
+
+<question3>
+ <question>3.Which palnet is known as the Earth’s twin?</question>
+</question3>
+
+<option3>
+ <opt>A)Venus</opt>
+</option3>
+<option3>
+ <opt>B)Mars</opt>
+</option3>
+<option3>
+ <opt>C)Jupiter</opt>
+</option3>
+<option3>
+ <opt>D)Saturn</opt>
+</option3>
+
+<question4>
+ <question>4.International Womens Day is celebrated on which of the following dates?</question>
+</question4>
+
+<option4>
+ <opt>A)February 28</opt>
+</option4>
+<option4>
+ <opt>B)March 4</opt>
+</option4>
+<option4>
+ <opt>C)March 15</opt>
+</option4>
+<option4>
+ <opt>D)March 8</opt>
+</option4>
+    
+<question5>
+ <question>5.The Sardar Sarovar Project is based on river……..</question>
+</question5>
+
+<option5>
+ <opt>A)Tapti</opt>
+</option5>
+<option5>
+    <opt>B)Narmada</opt>
+</option5>
+<option5>
+ <opt>C)Krishna</opt>
+</option5>
+<option5>
+ <opt>D)Godavari</opt>
+</option5>
+
+<question6>
+ <question>6.When was Simon Commission appointed by British Government</question>
+</question6>
+
+<option6>
+ <opt>A)1925</opt>
+</option6>
+<option6>
+ <opt>B)1926</opt>
+</option6>
+<option6>
+ <opt>C)1927</opt>
+</option6>
+<option6>
+ <opt>D)1937</opt>
+</option6>
+
+<question7>
+ <question>7. Chief Justice of the High Court can hold office until the age of</question>
+</question7>
+
+<option7>
+ <opt>A)58</opt>
+</option7>
+<option7>
+ <opt>B)62</opt>
+</option7>
+<option7>
+ <opt>C)65</opt>
+</option7>
+<option7>
+ <opt>D)72</opt>
+</option7>
+
+<question8>
+ <question>8.Who are the guardians of Fundamental rights?</question>
+</question8>
+
+<option8>
+ <opt>A)Supreme Court and High Court</opt>
+</option8>
+<option8>
+ <opt>B)Parliament</opt>
+</option8>
+<option8>
+ <opt>C)The President</opt>
+</option8>
+<option8>
+ <opt>D)The Prime Minister</opt>
+</option8>
+
+
+<question9>
+ <question>9.Who established the Indian Civil Services?</question>
+</question9>
+
+<option9>
+ <opt>A)Lord Wellesley</opt>
+</option9>
+<option9>
+ <opt>B)Lord Dalhousie</opt>
+</option9>
+<option9>
+ <opt>C)Lord Cornwallis</opt>
+</option9>
+<option9>
+ <opt>D)Lord Curzon</opt>
+</option9>
+
+<question10>
+ <question>10.Which city is the Manchester of India?</question>
+</question10>
+
+<option10>
+ <opt>A)Surat</opt>
+</option10>
+<option10>
+ <opt>B)Ahmedabad</opt>
+</option10>
+<option10>
+ <opt>C)Mumbai</opt>
+</option10>
+<option10>
+ <opt>D)Nagpur</opt>
+</option10>
+
+
+<question11>
+ <question>11.Whihc was the first satellite of the world</question>
+</question11>
+
+<option11>
+ <opt>A)INSAT-1A</opt>
+</option11>
+<option11>
+ <opt>B)Bhaskar</opt>
+</option11>
+<option11>
+ <opt>C)Aryabhatta</opt>
+</option11>
+<option11>
+ <opt>D)Sputnik-I</opt>
+</option11>
+
+<question12>
+ <question>12.When was All India Harijan Sangh was found by Mahatma Gandhi?</question>
+</question12>
+
+<option12>
+ <opt>A)1930</opt>
+</option12>
+<option12>
+ <opt>B)1931</opt>
+</option12>
+<option12>
+ <opt>C)1932</opt>
+</option12>
+<option12>
+ <opt>D)1933</opt>
+</option12>
+
+
+
+<question13>
+ <question>13.The first Indian to swim across English Channel was </question>
+</question13>
+
+<option13>
+ <opt>A)Mihir Sen</opt>
+</option13>
+<option13>
+ <opt>B)P.K. Banerji</opt>
+</option13>
+<option13>
+ <opt>C)Arati Saha</opt>
+</option13>
+<option13>
+ <opt>D)V. Merchant</opt>
+</option13>
+
+
+<question14>
+ <question>14.Maximum length of border of which of the following states is adjacent to that of other States ?</question>
+</question14>
+
+<option14>
+ <opt>A)Bihar</opt>
+</option14>
+<option14>
+ <opt>B)Rajasthan</opt>
+</option14>
+<option14>
+ <opt>C)Madhya Pradesh</opt>
+</option14>
+<option14>
+ <opt>D)Uttar Pradesh</opt>
+</option14>
+
+<question15>
+ <question>15.Who built Taj Mahal Hotel of Mumbai? </question>
+</question15>
+
+<option15>
+ <opt>A)Dhirubhai Ambani</opt>
+</option15>
+<option15>
+ <opt>B)Rahul Bajaj</opt>
+</option15>
+<option15>
+ <opt>C)Jamshetji Tata</opt>
+</option15>
+<option15>
+ <opt>D)Anand Mahindra</opt>
+</option15>
+
+<question16>
+ <question>16.Who among the first lady Governor of an Indian state? </question>
+</question16>
+
+<option16>
+ <opt>A)Mrs Sarojini Naidu </opt>
+</option16>
+<option16>
+ <opt>B)Miss Padmaja Naidu</opt>
+</option16>
+<option16>
+ <opt>C)Indira Gandhi</opt>
+</option16>
+<option16>
+ <opt>D)Pandita Ramabai</opt>
+</option16>
+     
+</KBC>

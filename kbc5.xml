@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KBC>
+<question1>
+ <question>1.Which is the Land of the Rising Sun? </question>
+</question1>
+
+<option1>
+ <opt>A)Australia</opt>
+</option1>
+<option1>
+ <opt>B)Japan</opt>
+</option1>
+<option1>
+ <opt>C)China</opt>
+</option1>
+<option1>
+ <opt>D)Taiwan</opt>
+</option1>
+
+<question3>
+ <question>3.The state which has the largest number of sugar mills in India is</question>
+</question3>
+
+<option3>
+ <opt>A)Uttar Pradesh</opt>
+</option3>
+<option3>
+ <opt>B)Bihar</opt>
+</option3>
+<option3>
+ <opt>C)Punjab</opt>
+</option3>
+<option3>
+ <opt>D)Haryana</opt>
+</option3>
+
+
+<question2>
+ <question>2.Taj Mahal is on the banks of </question>
+</question2>
+
+<option2>
+ <opt>A)Ganges</opt>
+</option2>
+<option2>
+ <opt>B)Kaveri</opt>
+</option2>
+<option2>
+ <opt>C)Tapti</opt>
+</option2>
+<option2>
+ <opt>D)Jamuna</opt>
+</option2>
+
+
+<question4>
+ <question>4.The Kalahari Desert is in</question>
+</question4>
+
+<option4>
+ <opt>A)India</opt>
+</option4>
+<option4>
+ <opt>B)Saudi Arabia</opt>
+</option4>
+<option4>
+ <opt>C)Chile</opt>
+</option4>
+<option4>
+ <opt>D)South Africa</opt>
+</option4>
+
+<question5>
+ <question>5.The Sardar Sarovar Project is based on river……..</question>
+</question5>
+
+<option5>
+ <opt>A)Tapti</opt>
+</option5>
+<option5>
+    <opt>B)Narmada</opt>
+</option5>
+<option5>
+ <opt>C)Krishna</opt>
+</option5>
+<option5>
+ <opt>D)Godavari</opt>
+</option5>
+
+    
+<question6>
+ <question>6.Second World war began in</question>
+</question6>
+
+<option6>
+ <opt>A)1930</opt>
+</option6>
+<option6>
+ <opt>B)1936</opt>
+</option6>
+<option6>
+ <opt>C)1938</opt>
+</option6>
+<option6>
+ <opt>D)1939</opt>
+</option6>
+
+<question7>
+ <question>7.The most important river of Orissa is </question>
+</question7>
+
+<option7>
+ <opt>A)Brahamaputra</opt>
+</option7>
+<option7>
+ <opt>B)Mahanadi</opt>
+</option7>
+<option7>
+ <opt>C)Saraswati</opt>
+</option7>
+<option7>
+ <opt>D)Godavari</opt>
+</option7>
+
+<question8>
+ <question>8.Which among the following river is most described in Rig-Veda?</question>
+</question8>
+
+<option8>
+ <opt>A)Sindhu</opt>
+</option8>
+<option8>
+ <opt>B)Chenab</opt>
+</option8>
+<option8>
+ <opt>C)Saraswati</opt>
+</option8>
+<option8>
+ <opt>D)Ganga</opt>
+</option8>
+
+
+<question9>
+ <question>9.The President of the Constituent Assembly was</question>
+</question9>
+
+<option9>
+ <opt>A) Dr. K.M. Munshi</opt>
+</option9>
+<option9>
+ <opt>B)Jawaharlal Nehru</opt>
+</option9>
+<option9>
+ <opt>C)Dr. Rajendra Prasad</opt>
+</option9>
+<option9>
+ <opt>D)Dr. B.R. Ambedkar</opt>
+</option9>
+
+<question10>
+ <question>10.In 1885 who was the President of Congress?</question>
+</question10>
+
+<option10>
+ <opt>A)Mahatma Gandhi</opt>
+</option10>
+<option10>
+ <opt>B)W.C.Barinerji</opt>
+</option10>
+<option10>
+ <opt>C)A.O.Hume</opt>
+</option10>
+<option10>
+ <opt>D)Shyamji Krishna Verma</opt>
+</option10>
+
+
+
+<question11>
+ <question>11.Satellite launching station in India is</question>
+</question11>
+
+<option11>
+ <opt>A)Pune</opt>
+</option11>
+<option11>
+ <opt>B)Bombay</opt>
+</option11>
+<option11>
+ <opt>C)Thumba</opt>
+</option11>
+<option11>
+ <opt>D)Sriharikota</opt>
+</option11>
+
+<question12>
+ <question>12.The first Indian Woman to scale Mount Everest was </question>
+</question12>
+
+<option12>
+ <opt>A)Arati Saha</opt>
+</option12>
+<option12>
+ <opt>B)Asha Agarwal</opt>
+</option12>
+<option12>
+ <opt>C)Bachendri Pal</opt>
+</option12>
+<option12>
+ <opt>D)Reita Fariya</opt>
+</option12>
+
+
+
+<question13>
+ <question>13.The first Indian to swim across English Channel was </question>
+</question13>
+
+<option13>
+ <opt>A)Mihir Sen</opt>
+</option13>
+<option13>
+ <opt>B)P.K. Banerji</opt>
+</option13>
+<option13>
+ <opt>C)Arati Saha</opt>
+</option13>
+<option13>
+ <opt>D)V. Merchant</opt>
+</option13>
+
+
+<question14>
+ <question>14.The metal used in storage batteries is ?</question>
+</question14>
+
+<option14>
+ <opt>A)Iron</opt>
+</option14>
+<option14>
+ <opt>B)Aluminium</opt>
+</option14>
+<option14>
+ <opt>C)Copper</opt>
+</option14>
+<option14>
+ <opt>D)Lead</opt>
+</option14>
+
+<question15>
+ <question>15.The currency notes are printed in </question>
+</question15>
+
+<option15>
+ <opt>A)Nagpur</opt>
+</option15>
+<option15>
+ <opt>B)New Delhi</opt>
+</option15>
+<option15>
+ <opt>C)Nasik</opt>
+</option15>
+<option15>
+ <opt>D)Bombay</opt>
+</option15>
+
+<question16>
+ <question>16.Who among the first lady Governor of an Indian state? </question>
+</question16>
+
+<option16>
+ <opt>A)Mrs Sarojini Naidu </opt>
+</option16>
+<option16>
+ <opt>B)Miss Padmaja Naidu</opt>
+</option16>
+<option16>
+ <opt>C)Indira Gandhi</opt>
+</option16>
+<option16>
+ <opt>D)Pandita Ramabai</opt>
+</option16>
+
+
+<question1>
+ <question></question>
+</question1>
+
+<option1>
+ <opt></opt>
+</option1>
+<option1>
+ <opt></opt>
+</option1>
+<option1>
+ <opt></opt>
+</option1>
+<option1>
+ <opt></opt>
+</option1>
+</KBC>
